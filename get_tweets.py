@@ -2,7 +2,7 @@ import snscrape.modules.twitter as sntwitter
 import pandas as pd
 
 
-query ="(from:fernandoharin) until:2022-12-31 since:2020-01-01"
+query ="(from:ErikSolheim) until:2022-12-31 since:2020-01-01"
 tweets=[]
 limit =100
 
@@ -20,4 +20,4 @@ print(df)
 print("-------------Converting into csv file----------")
 
 #export the dataframe to csv file
-df.to_csv(r'fernandoharin_tweets.csv', index=False)
+df.to_csv(r'ErikSolheim_tweets.csv', index=False)
