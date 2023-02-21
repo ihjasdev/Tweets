@@ -17,7 +17,3 @@ for tweet in sntwitter.TwitterSearchScraper(query).get_items():
 df=pd.DataFrame(tweets, columns=['Tweet Date','User','Tweet'])
 
 print(df)
-print("-------------Converting into csv file----------")
-
-#export the dataframe to csv file
-df.to_csv(r'jjstruthersuk_tweets.csv', index=False)

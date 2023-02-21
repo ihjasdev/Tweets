@@ -4,7 +4,7 @@ import pandas as pd
 df = pd.read_csv("Tweets/modified_file.csv")
 
 # Drop the unnamed column
-df = df.loc[:, ~df.columns.str.contains('^Unnamed')]
+df = df.drop(df.columns[df.columns.str.contains('Unnamed', case=False)], axis=1)
 
 # Save the resulting dataframe to a new CSV file
-df.to_csv("Tweets/new_file.csv", index=False)
+df.to_csv("Tweets/re_unnamed.csv", index=False)
